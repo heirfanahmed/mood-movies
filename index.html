@@ -4,15 +4,73 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Mood Movies</title>
 </head>
 <body>
 
     <!-- Create header with Nav Bar - Josh -->
+        <nav class="nav-bar-title">
+        <a class="nav-title" href="#"><img class="logo" src="logo.png">MoodMovies</a>
+          <ul class="nav-list">
+            <li class="nav-entry">
+              <button class="nav-entry-link"><a href="#">Weather Forecast</a></button>
+            </li>
+            <li class="nav-entry">
+              <button class="nav-entry-link"><a href="#">Movies</a></button>
+            </li>
+            <li class="nav-entry">
+              <button class="nav-entry-link"><a href="#">Contact Us</a></button>
+            </li>
+          </ul>
+      </nav>
     <!-- Create Search/Form - Irfan -->
+    <div>
+      <form class="text-search">
+          <input type="text" class="fa-solid fa-search" placeholder="Type location"  name="search">
+          <button type="submit" class="submit">Search</button>
+      </form>
+    </div>
     <!-- Create current Weather report display - Daisy -->
+
+    <section>
+        <div class="container wrapper">
+          <div class="icon-container">
+            <img class="weather-icon" src="" alt="Weather Icon">
+          </div>
+          <div class="weather-container">
+            <h2 id="location" class="location">Location</h2>
+            <h3 id="temperature" class="temperature">Temperature</h3>
+            <p id="discription-weather" class="discription-weather" >A description of the weather.</p>
+          </div>
+        </div>
+    </section>
+
     <!-- Create Movie list choices with respect to the above weather report - Desi -->
+
+    <h4>Movie suggestions</h4>
+    <div class="container-fluid row mt-4 w-100">  
+      <ul id="movie-list" class="list-group list-group-horizontal">
+        <li class="list-group-item card col m-1"></li>
+        <li class="list-group-item card col m-1"></li>
+        <li class="list-group-item card col m-1"></li>
+        <li class="list-group-item card col m-1"></li>
+        <li class="list-group-item card col m-1"></li>
+        <li class="list-group-item card col m-1"></li>
+      </ul>
+    </div>
     <!-- Create footer - Irfan -->
+    <footer>
+        <div>
+            <h5>
+                Moodmovies &#169 copyright 2023
+            </h5>
+            <h4>
+                <span style="cursor:pointer"> <u>Contact Us</u> </span>
+            </h4>
+        </div>
+    </footer>
 
 </body>
 </html>
