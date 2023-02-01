@@ -1,0 +1,23 @@
+/* Style the input form and search button to center of its div */
+form.text-search {
+    text-align: center;
+}
+
+
+form.text-search input[type=text] {
+    color: blue;
+    background: #f1f1f1;
+    border-radius: 25px;
+    width: 50%;
+  }
+
+
+button {
+    background-color: black;
+    color: white;
+    border-radius: 25px;
+}
+
+form.text-search button:hover {
+    background: #0b7dda;
+  }
