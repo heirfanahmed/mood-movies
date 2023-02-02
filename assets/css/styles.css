@@ -42,7 +42,7 @@ body {
     display: flex;
     align-items: center;
     font-size: xx-large;
-    margin-left: 10px;
+    margin-left: 5px;
     color: black;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 1000;
@@ -92,3 +92,49 @@ body {
 
 
 
+.show-nav
+{
+   visibility: visible;
+}
+
+
+.show-widget
+{
+   visibility: hidden;
+}
+
+.navbar-toggler
+{
+    position: absolute;
+    right: 20px;
+    top: 30px;
+}
+.navbar-toggler-icon
+{
+    width: 30px;
+}
+
+@media (max-width: 779px) {
+    
+    .show-widget
+    {
+   visibility: visible;
+    }
+    .show-nav
+    {
+   visibility: hidden;
+    }
+    .logo
+    {
+    margin-left: 15px;
+    }
+  }
+  
+
+  @media (max-width: 520px) {
+    
+    .navbar-toggler
+    {
+    margin-top: 10px;
+    }   
+  }
