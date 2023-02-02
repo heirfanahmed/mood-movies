@@ -113,6 +113,50 @@ body {
     width: 30px;
 }
 
+/* Weather section */
+
+.wrapper {
+    padding: 4rem 2rem;
+}
+
+.container {
+    display: flex;
+    border-radius: 8px;
+    background: var(--dayBackground);
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+    width: 49%;
+}
+
+.weather-container {
+    width: 49%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+.temperature {
+    font-size: 160px !important;
+    font-weight: 600px !important;
+    color: var(--white);
+}
+
+.location {
+    font-weight: 400;
+    font-size: 24px;
+    color: var(--white);
+    padding-top: 40px;
+}
+
+.discription-weather {
+    padding-bottom: 40px;
+}
+
+
 @media (max-width: 779px) {
     
     .show-widget
