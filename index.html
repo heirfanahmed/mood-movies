@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="assets/css/styles.css">
     <title>Mood Movies</title>
 </head>
@@ -33,63 +34,74 @@
       <!-- Create Search/Form - Irfan -->
       <div>
         <form class="text-search">
-            <input type="text" class="fa-solid fa-search" placeholder="Type location" name="search">
-            <button type="submit" class="submit">Search</button>
+          <div class="input-group mb-3">
+            <span class="input-group-text border-0" id="search-addon"><i class="fas fa-search"></i></span>
+            <input
+              type="search"
+              class="form-control rounded"
+              placeholder="Type location"
+              aria-label="Search"
+              aria-describedby="search-addon"
+            />
+            <button class="btn btn-outline-dark" type="button" id="button-addon2" data-mdb-ripple-color="dark">
+              Search
+            </button>
+          </div>
         </form>
       </div>
       <!-- Create current Weather report display - Daisy -->
   
-      <div class="container wrapper">
-      <section id="weather-forecast">
       
-            <div class="icon-container">
+      <section id="weather-forecast">
+        <div class="container fluid row">
+            <div class="icon-container mr-20 col-5">
               <img class="weather-icon" src="" alt="Weather Icon">
             </div>
-            <div class="weather-container">
+            <div class="weather-container col-7">
               <h2 id="location" class="location">Location</h2>
-              <h3 id="temperature" class="temperature">Temperature</h3>
+              <p id="temperature" class="temperature display-1"><strong>10°C</strong></p>
               <p id="discription-weather" class="discription-weather">A description of the weather.</p>
             </div>
-         
+          </div>
       </section>
-    </div>
+   
       <!-- Create Movie list choices with respect to the above weather report - Desi -->
-      <section id="movies" class="container">
+      <section id="movies" class="container-fluid">
         <h4>Movie suggestions</h4>
       <div class="row mt-4 w-100" id="movie-list">  
   
-          <div class="card col-2">
+          <div class="card col-sm-4 col-md-4 col-lg-2">
               <img class="card-img-top" src="assets/img/movie1.jpg" alt="Card image cap">
                <div>
                  <h3 class="text h-3">...</h3>
                </div>
           </div>
-          <div class="card col-2">
+          <div class="card col-sm-4 col-md-4 col-lg-2">
               <img class="card-img-top" src="assets/img/movie2.jpg" alt="Card image cap">
                <div>
                  <h3 class="text h-3"></h3>
                </div>
           </div>     
-          <div class="card col-2">
+          <div class="card col-sm-4 col-md-4 col-lg-2">
               <img class="card-img-top" src="assets/img/movie3.jpg" alt="Card image cap">
                <div>
                  <h3 class="text h-3"></h3>
                </div>
           </div>
    
-          <div class="card col-2">
+          <div class="card col-sm-4 col-md-4 col-lg-2">
               <img class="img-fluid" src="assets/img/movie4.jpg" alt="Card image cap">
                <div>
                  <h3 class="text h-3"></h3>
                </div>
           </div>
-          <div class="card col-2">
+          <div class="card col-sm-4 col-md-4 col-lg-2">
               <img class="card-img-top" src="assets/img/movie5.jpg" alt="Card image cap">
                <div>
                  <h3 class="text h-3"></h3>
                </div>
           </div>
-          <div class="card col-2">
+          <div class="card col-sm-4 col-md-4 col-lg-2">
               <img class="card-img-top" src="assets/img/movie6.jpg" alt="Card image cap">
                <div>
                  <h3 class="text h-3"></h3>
@@ -101,14 +113,14 @@
     </section>
   
       <!-- Create footer - Irfan -->
-      <footer id="contact-us">
-          <div>
-              <h5>
+      <footer id="contact-us" >
+          <div class="container-fluid row">
+              <p class="col-5" >
                   Moodmovies © copyright 2023
-              </h5>
-              <h4>
-                  <span style="cursor:pointer"> <u>Contact Us</u> </span>
-              </h4>
+              </p >
+              <p class="col-7">
+                  <span style="cursor:pointer" class="justify-content-end"> <u>Contact Us</u> </span>
+              </p>
           </div>
       </footer>
   
