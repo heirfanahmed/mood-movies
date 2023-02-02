@@ -8,14 +8,13 @@
     --dayBackground: linear-gradient(180deg, #2E81FE 0%, #9EC5FF 100%);
     --nightBackground: linear-gradient(180deg, #000000 0%, #270157 100%);
     --cards-border-radius: 24px;
-    --
 }
 
 
 body {
     margin: 0;
     padding: 0;
-    background-color: #F7F7F7;
+    background-color: var(--greyBack);
  }
 
 .nav-bar-title
@@ -68,12 +67,12 @@ body {
 {
     margin-left: 7px;
     margin-right: 7px;
-    background-color: #FFFFFF;
+    background-color: var(--white);
     font-size: 18px;
     margin-top: 27px;
     border-radius: 30px;
     padding: 4px 15px 4px 15px;
-    border-color: #ECECEC;
+    border-color: var(--greyMedium);
     border-style: solid;
     border-width: 1px;
    
@@ -81,7 +80,7 @@ body {
 
 .nav-list button:hover
 {
-    box-shadow: 1px 2px 5px 1px #888888;
+    box-shadow: 1px 2px 5px 1px var(--greyDark);
 }
 
 .nav-list button a{
