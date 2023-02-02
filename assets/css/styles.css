@@ -1,3 +1,143 @@
+:root {
+    --blue: #0066FF;
+    --black: #000000;
+    --white: #FFFFFF;
+    --greyMedium: #ECECEC;
+    --greyBack: #F7F7F7;
+    --greyDark: #A8A8A8;
+    --dayBackground: linear-gradient(180deg, #2E81FE 0%, #9EC5FF 100%);
+    --nightBackground: linear-gradient(180deg, #000000 0%, #270157 100%);
+    --cards-border-radius: 24px;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--greyBack);
+ }
+
+.nav-bar-title
+{
+    display: grid;
+    grid-template-columns: 15% 85%;
+    grid-template-areas: 
+    "nav-title nav-list"
+    ;
+
+    background-color: var(--nav-background);
+}
+
+.logo
+{
+    height: 70px;
+    margin-right: 20px;
+    margin-left: 35px;
+}
+
+.nav-title
+{
+    grid-area: nav-title;
+    display: flex;
+    align-items: center;
+    font-size: xx-large;
+    margin-left: 5px;
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 1000;
+    margin-top: 10px;
+}
+
+.nav-title:hover{
+    opacity: 0.5;
+    color: black;
+}
+
+.nav-list
+{
+    grid-area: nav-list;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+
+.nav-list button
+{
+    margin-left: 7px;
+    margin-right: 7px;
+    background-color: var(--white);
+    font-size: 18px;
+    margin-top: 27px;
+    border-radius: 30px;
+    padding: 4px 15px 4px 15px;
+    border-color: var(--greyMedium);
+    border-style: solid;
+    border-width: 1px;
+   
+}
+
+.nav-list button:hover
+{
+    box-shadow: 1px 2px 5px 1px var(--greyDark);
+}
+
+.nav-list button a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+
+.show-nav
+{
+   visibility: visible;
+}
+
+
+.show-widget
+{
+   visibility: hidden;
+}
+
+.navbar-toggler
+{
+    position: absolute;
+    right: 20px;
+    top: 30px;
+}
+.navbar-toggler-icon
+{
+    width: 30px;
+}
+
+@media (max-width: 779px) {
+    
+    .show-widget
+    {
+   visibility: visible;
+    }
+    .show-nav
+    {
+   visibility: hidden;
+    }
+    .logo
+    {
+    margin-left: 15px;
+    }
+  }
+  
+
+  @media (max-width: 520px) {
+    
+    .navbar-toggler
+    {
+    margin-top: 10px;
+    }   
+  }
+
 /* Search text and button styling */
 form.text-search {
     text-align: center;
