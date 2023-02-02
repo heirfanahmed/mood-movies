@@ -158,7 +158,7 @@ form button {
 }
 
 /* Serach button hover styling */
-button:hover {
+form button:hover {
     background-color: blue;
     /* color: red; */
 }
