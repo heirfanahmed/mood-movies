@@ -154,6 +154,7 @@ body {
 
 .discription-weather {
     padding-bottom: 40px;
+    color: var(--white);
 }
 
 
@@ -180,6 +181,38 @@ body {
     {
     margin-top: 10px;
     }   
+    .container {
+        flex-flow: column;
+    }
+    .icon-container {
+        width: 100%;
+        padding-top: 40px;
+    }
+    .weather-container {
+        width: 100%;
+        flex-direction: row;
+    }
+    .location {
+        font-size: 24px !important;
+        font-weight: 400;
+        line-height: 32px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+    .temperature {
+        font-size: 56px !important;
+        font-weight: 600;
+        line-height: 64px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+    .discription-weather {
+       font-family: Inter;
+       font-size: 16px;
+       font-weight: 400;
+       line-height: 24px;
+       text-align: left;
+    }
   }
 
 /* Search text and button styling */
