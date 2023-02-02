@@ -1,12 +1,20 @@
 # Project 1 - MoodMovies
 
+## Collaborators:
+
+1. Desislava Ivanova
+2. Desislava Metodieva
+3. Irfan Ahmed
+4. Josh Williams
+
+
 ## Task
 
 Based on real world problem, develop a Mood Movies list for the user to play depending on the real time weather at the particular location. Use two server side APIs for weather and movie player. Our challenge is to build a weather dashboard that will run in the browser and feature dynamically updated HTML and CSS powered by Javascript using Bootstrap and jQuery.
 
 Server side APIs used are:
 1. Weather (OpenWeather - https://openweathermap.org) - for real time weather report.
-2. OMDB - for the movies.
+2. TMDB - for the movies.
 
 Using above weather API, present day / time weather forecast is retrieved for the selected city. The link displays movies based on the weather report.
 If it is sunny, it recommends 6 movies based on action, adventure, musicals, romance, sports and thriller.
