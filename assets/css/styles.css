@@ -1,0 +1,51 @@
+/* Search text and button styling */
+form.text-search {
+    text-align: center;
+}
+
+/* Search text styling */
+form.text-search input[type=text] {
+    color: blue;
+    border-radius: 20px;
+    width: 50%;
+}
+
+/* Search button styling */
+form button {
+    background: black;
+    color: white;
+    border-radius: 20px;
+}
+
+/* Serach button hover styling */
+button:hover {
+    background-color: blue;
+    /* color: red; */
+}
+
+/* footer, copyright and contacts bring into one line */
+footer {
+     display: flexbox;
+}
+
+/* footer, Moodmovies copyright styling */
+footer h5 {
+    color: gray;
+    font-size: 15px;
+    font-style: italic;
+    padding: 10px; 
+}
+
+/* footer, Contact Us styling */
+footer span {
+    color: blue;
+    font-weight: 500;
+    font-size: 20px;
+    float: right;
+    padding-right: 20px;
+}
+
+/* footer, Contact Us hover styling  */
+footer span:hover {
+    color: red;
+}
