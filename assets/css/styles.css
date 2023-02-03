@@ -158,6 +158,14 @@ body {
     color: var(--white);
 }
 
+.dayBackground {
+    background: var(--dayBackground);
+}
+
+.nightBackground {
+    background: var(--nightBackground);
+}
+
 .navbar{
     position: inherit;
 }
