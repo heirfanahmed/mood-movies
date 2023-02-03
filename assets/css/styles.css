@@ -158,7 +158,9 @@ body {
     color: var(--white);
 }
 
-
+.navbar{
+    position: inherit;
+}
 @media (max-width: 779px) {
     
     .show-widget
