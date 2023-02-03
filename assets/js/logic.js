@@ -16,29 +16,55 @@
 // 
 // 
 
-var apiKey = "90bfcfb3836391f1a58986e70119cd20";
+var apiKeyMovie = "90bfcfb3836391f1a58986e70119cd20";
 
 // SEARCH BY MOVIE
-var queryUrl = "https://api.themoviedb.org/3/search/movie?api_key="+apiKey+"&query=Jack+Reacher";
+var queryUrl = "https://api.themoviedb.org/3/search/movie?api_key="+apiKeyMovie+"&query=Jack+Reacher";
 //FIND GENRE LIST
-var queryUrl2 = "https://api.themoviedb.org/3/genre/movie/list?api_key="+apiKey+"&language=en-US";
+var queryUrl2 = "https://api.themoviedb.org/3/genre/movie/list?api_key="+apiKeyMovie+"&language=en-US";
 // SEARCH BY GENRE
-var queryUrl3 = "https://api.themoviedb.org/3/discover/movie?api_key="+apiKey+"&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=28"; // Mix genres with comma
+var queryUrl = "https://api.themoviedb.org/3/discover/movie?api_key="+apiKeyMovie+"&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=28"; // Mix genres with comma
 
 
 
+
+
+
+
+// EVENT LISTENER FOR SUBMIT BUTTON TO GET CITY
 var locationEntry;
 $(".submit" ).click(function(event) {
     event.preventDefault();
     locationEntry = ($(".text-search").children().eq(0).val());
-    console.log(locationEntry);
+  
+
+  // CALL TO GEO API FOR LAT AND LON
+  var apiKeyWeather = "294d8b64be1fb708429a60b0e59477b5";
+  var queryUrlGeocode = "https://api.openweathermap.org/geo/1.0/direct?q="+locationEntry+"&limit=1&appid="+apiKeyWeather;
+  $.ajax({
+    url: queryUrlGeocode,
+    method: "GET"
+  }).then(function(response) {
+      var lat = response[0].lat;
+      var lon = response[0].lon;
+      var queryUrlWeather = "https://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lon+"&appid="+apiKeyWeather+"&units=metric";
+  // CALL TO WEATHER API FOR CURRENT WEATHER
+  $.ajax({
+      url: queryUrlWeather,
+      method: "GET"
+  }).then(function(response) {
+     console.log(response) // <<< THIS IS API RESPONSE AFTER YOU ENTER CITY NAME AND PRESS SEARCH
+    }); 
+
   });
+});
+
+
 
 $.ajax({
-  url: queryUrl3,
+  url: queryUrl,
   method: "GET"
 }).then(function(response) {
-    console.log(response)
     for(var i = 0; i<6 ; i++)
     {
         $("#movie-list").children().eq(i).children().eq(0).attr("src","https://image.tmdb.org/t/p/w500"+response.results[i].poster_path);
