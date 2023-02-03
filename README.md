@@ -61,8 +61,8 @@ As a user of this web app, I want to watch movies based on the weather condition
 1. Bootstrap in HTML.
 2. jQuery in Javascript.
 3. Third party servers APIs -
-    *** Weather (OpenWeather - https://openweathermap.org) - for real time weather report.
-    *** OMDB - for the movies.
+  *** Weather (OpenWeather - https://openweathermap.org) - for real time weather report.
+  *** TMDB - for the movies.
 4. Kandan board implementation.
 
 
@@ -86,12 +86,12 @@ As a user of this web app, I want to watch movies based on the weather condition
 
 
 ## Screen Shot of the deployed website:
-  ![](images/mood-movies.png)
+  ![](assets/images/mood-movies.png)
 
 
 
 ## Links to the deployed website and repository URL:
 
-*** Repository URL:
+*** Repository URL: https://github.com/heirfanahmed/mood-movies
 
-*** Deployed website:
+*** Deployed website: https://heirfanahmed.github.io/mood-movies/
