@@ -73,11 +73,12 @@ $(".submit" ).click(function(event) {
       weatherConditions = response.weather[0].main;
       var discriptionWeather = $('#discription-weather');
       discriptionWeather.text(weatherConditions);
+      $('.weather-icon').attr("src","assets/images/"+weatherConditions+".svg");
+      
     }); 
 
   });
 });
-
 
 
 $.ajax({
