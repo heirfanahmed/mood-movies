@@ -228,7 +228,7 @@ form.text-search {
 /* Search text styling */
 form.text-search input[type=text] {
     color: blue;
-    border-radius: 20px;
+    border-radius: 8px;
     width: 50%;
 }
 
@@ -246,8 +246,8 @@ form button:hover {
 }
 
 /* footer, copyright and contacts bring into one line */
-footer {
-     display: flexbox;
+footer {    
+     padding-top: 20px;
 }
 
 /* footer, Moodmovies copyright styling */
@@ -255,16 +255,19 @@ footer h5 {
     color: gray;
     font-size: 15px;
     font-style: italic;
-    padding: 10px; 
+    padding-left: 10px;
 }
 
 /* footer, Contact Us styling */
 footer span {
     color: blue;
+    font-style: italic;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 500;
     font-size: 20px;
     float: right;
     padding-right: 20px;
+    padding-bottom: 20px;
 }
 
 /* footer, Contact Us hover styling  */
