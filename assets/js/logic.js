@@ -53,7 +53,26 @@ $(".submit" ).click(function(event) {
       url: queryUrlWeather,
       method: "GET"
   }).then(function(response) {
-     console.log(response) // <<< THIS IS API RESPONSE AFTER YOU ENTER CITY NAME AND PRESS SEARCH
+      console.log(response) // <<< THIS IS API RESPONSE AFTER YOU ENTER CITY NAME AND PRESS SEARCH
+
+      // Traversing current temperature at the searched Location
+      var currentTemp;
+      currentTemp = response.main.temp;
+      currentTemp = Math.round(currentTemp);
+      var tempH3 = $('#temperature');
+      tempH3.text(currentTemp + "°");
+     
+      // Traversing the searched location
+      var cityName;
+      cityName = response.name;
+      var cityLocation = $('#location');
+      cityLocation.text(cityName);
+
+      // Traversing weather conditions for the searched location
+      var weatherConditions;
+      weatherConditions = response.weather[0].main;
+      var discriptionWeather = $('#discription-weather');
+      discriptionWeather.text(weatherConditions);
     }); 
 
   });
