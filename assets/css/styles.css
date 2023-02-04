@@ -229,6 +229,14 @@ body {
   }
 
 /* Search text and button styling */
+.search-icon {
+    height: 20px;
+    font-weight: bold;
+    margin-right: 0;
+    position: relative;
+    left: 6vh;
+}
+
 form.text-search {
     text-align: center;
 }
@@ -236,8 +244,11 @@ form.text-search {
 /* Search text styling */
 form.text-search input[type=text] {
     color: blue;
-    border-radius: 8px;
-    width: 50%;
+    border-radius: 20px;
+    width: 92%;
+    padding-left: 5vh;
+    padding-right: 15vh;
+    height: 40px;
 }
 
 /* Search button styling */
@@ -245,6 +256,8 @@ form button {
     background: black;
     color: white;
     border-radius: 20px;
+    position: relative;
+    right: 13vh;
 }
 
 /* Serach button hover styling */
