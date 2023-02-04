@@ -166,6 +166,12 @@ body {
     background: var(--nightBackground);
 }
 
+/* movie section repositioned */
+#movies {
+    margin-left: 16%;
+    width:68%;
+}
+
 .navbar{
     position: inherit;
 }
