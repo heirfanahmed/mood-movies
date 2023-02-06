@@ -175,6 +175,7 @@ body {
 .navbar{
     position: inherit;
 }
+
 @media (max-width: 779px) {
     
     .show-widget
