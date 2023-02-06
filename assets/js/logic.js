@@ -30,6 +30,7 @@ var locationEntry;
 var weatherIcon;
 $(".submit" ).click(function(event) {
     event.preventDefault();
+    $('#movie-list').empty();
     locationEntry = $("#test").val();
   // CALL TO GEO API FOR LAT AND LON
   var queryUrlGeocode = "https://api.openweathermap.org/geo/1.0/direct?q="+locationEntry+"&limit=1&appid="+apiKeyWeather;
@@ -87,10 +88,10 @@ $.ajax({
 }).then(function(response) {
   console.log(response)
 
-for(var i = 0; i<6 ; i++)
+for(var i = 0; i<12 ; i++)
 {   
  //creates HTML elements - div with image) 
-  $('<div>').clone().appendTo('#movie-list').addClass('col-2').append($('<img>').addClass('card col-12').attr("src","https://image.tmdb.org/t/p/w500"+response.results[i].poster_path));
+  $('<div>').clone().appendTo('#movie-list').addClass('col-sm-12 col-md-4 col-lg-2 mt-1').append($('<img>').addClass('card col-12').attr("src","https://image.tmdb.org/t/p/w500"+response.results[i].poster_path));
 }
 });
 }
