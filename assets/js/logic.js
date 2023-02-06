@@ -92,12 +92,20 @@ var weatherConditions;
 weatherConditions = response.weather[0].main;
 var discriptionWeather = $('#discription-weather');
 discriptionWeather.text(weatherConditions);
-$('.weather-icon').attr("src","assets/images/"+weatherConditions+".svg");
+
+ // Adding day and night icons based on the current time at the destination
+ if (unixTimestamp > sunrise && unixTimestamp < sunset) {
+ $('.weather-icon').attr("src","assets/images/"+weatherConditions+".svg");
+} else {
+    $('.weather-icon').attr("src","assets/images/"+weatherConditions+"n.svg");
+};
+// $('.weather-icon').attr("src","assets/images/"+weatherConditions+".svg");
+
 }); 
 });
 });
 
- // Adding day and night background based on the current time
+
       
 
 
