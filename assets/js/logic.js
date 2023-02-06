@@ -48,6 +48,32 @@ $(".submit" ).click(function(event) {
     weatherIcon = response.weather[0].icon;
     getMovies ();
  // <<< THIS IS API RESPONSE AFTER YOU ENTER CITY NAME AND PRESS SEARCH
+
+ var localTime = moment();
+ console.log(response);
+ var timezoneOffset = response.timezone;
+ var destinationTime = moment(localTime).utcOffset(timezoneOffset / 3600);
+ var unixTimestamp = destinationTime.unix();
+
+ // Checking if the correct value is pulled from the API and converted correctly
+ // console.log(unixTimestamp);
+
+ var sunrise = response.sys.sunrise;
+ var sunset = response.sys.sunset;
+
+ console.log(sunrise);
+ console.log(sunset);
+
+ var weatherEl = $(".container");
+
+ // Checking for the local time and if it is during the time between sunrise and sunset, the script adds dayBackground, if not adds nightBackground
+ 
+ if (unixTimestamp > sunrise && unixTimestamp < sunset) {
+   weatherEl.addClass("dayBackground");
+ } else {
+   weatherEl.addClass("nightBackground");
+ };
+
  // Traversing current temperature at the searched Location
 var currentTemp;
 currentTemp = response.main.temp;
@@ -70,6 +96,9 @@ $('.weather-icon').attr("src","assets/images/"+weatherConditions+".svg");
 }); 
 });
 });
+
+ // Adding day and night background based on the current time
+      
 
 
 function getMovies () {
