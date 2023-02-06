@@ -15,7 +15,6 @@
 // 7. Get title of the image from the TMDB API
 // 
 // 
-var index=0;
 var apiKeyMovie = "90bfcfb3836391f1a58986e70119cd20";
 var apiKeyWeather = "294d8b64be1fb708429a60b0e59477b5";
 
@@ -24,8 +23,6 @@ var queryUrl = "https://api.themoviedb.org/3/search/movie?api_key="+apiKeyMovie+
 //FIND GENRE LIST
 var queryUrl2 = "https://api.themoviedb.org/3/genre/movie/list?api_key="+apiKeyMovie+"&language=en-US";
 // SEARCH BY GENRE
-
-
 
 
 // EVENT LISTENER FOR SUBMIT BUTTON TO GET CITY
@@ -91,8 +88,9 @@ $.ajax({
   console.log(response)
 
 for(var i = 0; i<6 ; i++)
-{
-    $("#movie-list").children().eq(i).children().eq(0).attr("src","https://image.tmdb.org/t/p/w500"+response.results[i].poster_path);
+{   
+ //creates HTML elements - div with image) 
+  $('<div>').clone().appendTo('#movie-list').addClass('col-2').append($('<img>').addClass('card col-12').attr("src","https://image.tmdb.org/t/p/w500"+response.results[i].poster_path));
 }
 });
 }
