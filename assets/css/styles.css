@@ -323,35 +323,49 @@ footer {
 }
 
 /* footer, Moodmovies copyright styling */
-footer h5 {
-    color: gray;
-    font-size: 15px;
-    font-style: italic;
-    padding-left: 10px;
+
+.contact-us {
+    width: 48%;
+    color: var(--blue);
+    font-size: 12px;
+    font-weight: 500;
+    justify-content: flex-end;
+    display: flex;
 }
 
 /* footer, Contact Us styling */
-footer span {
-    color: blue;
-    font-style: italic;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+footer {
+    color: var(--black);
     font-weight: 500;
     font-size: 20px;
     float: right;
     padding-right: 20px;
     padding-bottom: 20px;
-}
 
-/* footer, Contact Us hover styling  */
-footer span:hover {
-    color: red;
 }
 
 .hidden
 {
     visibility: hidden;
 }
+
 .shown
 {
     visibility: visible;
+}
+
+.sticky {
+    position: fixed;
+    bottom: 0;
+}
+
+.flex {
+    display: flex;
+}
+
+.copyright {
+    width: 48%;   
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--greyDark);
 }
