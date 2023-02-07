@@ -293,7 +293,9 @@ form button {
     border-radius: 20px;
     margin-top: 5px;
     position: absolute;
-    right: 8vh;
+    right: 4vh;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 /* Serach button hover styling */
