@@ -117,13 +117,15 @@ body {
 /* Weather section */
 
 .wrapper {
-    padding: 4rem 2rem;
+    padding: 1rem 1rem;
 }
+/*class changed - 'container' replaced with 'space' */
+.space {
 
-.container {
     display: flex;
     border-radius: 8px;
-   /*  background: var(--dayBackground); */
+    gap: 64px;
+   /*  background: var(--dayBackground);*/
 }
 
 .icon-container {
@@ -166,14 +168,11 @@ body {
     background: var(--nightBackground);
 }
 
-.space {
-    gap: 64px;
-}
 
 /* movie section repositioned */
 #movies {
-    margin-left: 15.5%;
-    width:68%;
+    padding: 2rem 2rem;
+    width:100%;
 }
 
 .navbar{
@@ -267,7 +266,7 @@ form.text-search {
 form.text-search input[type=text] {
     color: blue;
     border-radius: 20px;
-    width: 92%;
+    width: 100%;
     padding-left: 5vh;
     padding-right: 15vh;
     height: 40px;

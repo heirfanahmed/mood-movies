@@ -65,7 +65,8 @@ $(".submit" ).click(function(event) {
  console.log(sunrise);
  console.log(sunset);
 
- var weatherEl = $(".container");
+ //class changed - class container replaced with class space
+ var weatherEl = $(".space");
 
  // Checking for the local time and if it is during the time between sunrise and sunset, the script adds dayBackground, if not adds nightBackground
  
