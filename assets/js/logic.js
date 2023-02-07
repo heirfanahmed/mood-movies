@@ -128,7 +128,7 @@ $.ajax({
 for(var i = 0; i<12 ; i++)
 {   
  //creates HTML elements - div with image) 
-  $('<div>').clone().appendTo('#movie-list').addClass('col-sm-12 col-md-4 col-lg-2 mt-1').append($('<img>').addClass('card col-12').attr("src","https://image.tmdb.org/t/p/w500"+response.results[i].poster_path));
+  $('<div>').clone().appendTo('#movie-list').addClass('col-sm-12 col-md-4 col-lg-2 mt-1').append($('<img>').addClass('card col-12').attr("src","https://image.tmdb.org/t/p/w500"+response.results[i].poster_path).attr("alt","Movie Poster"));
 }
 });
 }
