@@ -100,7 +100,11 @@ discriptionWeather.text(weatherConditions);
 } else {
     $('.weather-icon').attr("src","assets/images/"+weatherConditions+"n.svg");
 };
-// $('.weather-icon').attr("src","assets/images/"+weatherConditions+".svg");
+
+$("#weather").removeClass("hidden");
+$("#movies").removeClass("hidden");
+$("#weather").addClass("shown");
+$("#movies").addClass("shown");
 
 }); 
 });
