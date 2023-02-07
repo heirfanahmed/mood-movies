@@ -92,7 +92,7 @@ cityLocation.text(cityName);
 var weatherConditions;
 weatherConditions = response.weather[0].main;
 var discriptionWeather = $('#discription-weather');
-discriptionWeather.text(weatherConditions);
+discriptionWeather.text("The weather is "+weatherConditions+"!"+ " Check Below for some movies that will go well with this weather!");
 
  // Adding day and night icons based on the current time at the destination
  if (unixTimestamp > sunrise && unixTimestamp < sunset) {
