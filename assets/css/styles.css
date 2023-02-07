@@ -236,6 +236,8 @@ body {
         line-height: 32px;
         letter-spacing: 0em;
         text-align: left;
+        display: flex;
+        order: -1;
     }
     .temperature {
         font-family: 'Inter', sans-serif;
@@ -255,10 +257,14 @@ body {
     .gap-items {
         display: flex;
         column-gap: 32px;
+        flex-direction: column;
     }
     .temp-mobile {
         order: -1 !important;
         display: flex;
+    }
+    .weather-icon {
+        max-width: 120px;
     }
   }
 
@@ -293,9 +299,7 @@ form button {
     border-radius: 20px;
     margin-top: 5px;
     position: absolute;
-    right: 4vh;
-    padding-left: 15px;
-    padding-right: 15px;
+    right: 8vh;
 }
 
 /* Serach button hover styling */
