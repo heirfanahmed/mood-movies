@@ -276,7 +276,8 @@ flex-grow: 1;
     height: 20px;
     font-weight: bold;
     margin-right: 0;
-    position: relative;
+    margin-top: 10px;
+    position: absolute;
     left: 6vh;
 }
 
@@ -288,7 +289,7 @@ form.text-search {
 form.text-search input[type=text] {
     color: blue;
     border-radius: 20px;
-    width: 100%;
+width: 100%;
     padding-left: 5vh;
     padding-right: 15vh;
     height: 40px;
@@ -299,9 +300,11 @@ form button {
     background: black;
     color: white;
     border-radius: 20px;
+    margin-top: 5px;
     position: absolute;
-    top: 27vh;
-    right: 12vh;
+    right: 4vh;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 /* Serach button hover styling */
