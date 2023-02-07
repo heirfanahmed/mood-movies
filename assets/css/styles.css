@@ -197,6 +197,10 @@ body {
     .space {
         gap: 0;
     }
+    .weather-icon {
+        max-width: 300px;
+    }
+    
   }
   
 
