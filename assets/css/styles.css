@@ -279,8 +279,8 @@ form.text-search {
 form.text-search input[type=text] {
     color: blue;
     border-radius: 20px;
-    width: 100%;
-    padding-left: 5vh;
+width: 92%;
+    padding-left: 7vh;
     padding-right: 15vh;
     height: 40px;
 }
@@ -290,8 +290,9 @@ form button {
     background: black;
     color: white;
     border-radius: 20px;
-    position: relative;
-    right: 13vh;
+    position: absolute;
+    top: 27vh;
+    right: 12vh;
 }
 
 /* Serach button hover styling */
