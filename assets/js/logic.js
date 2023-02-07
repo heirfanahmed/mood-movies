@@ -133,6 +133,8 @@ $("#weather").removeClass("hidden");
 $("#movies").removeClass("hidden");
 $("#weather").addClass("shown");
 $("#movies").addClass("shown");
+$(".text-search").attr("style","margin-top: 0%;");
+
 
 }); 
 });
