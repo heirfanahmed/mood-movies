@@ -317,3 +317,12 @@ footer span {
 footer span:hover {
     color: red;
 }
+
+.hidden
+{
+    visibility: hidden;
+}
+.shown
+{
+    visibility: visible;
+}
