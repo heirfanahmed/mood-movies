@@ -289,14 +289,15 @@ flex-grow: 1;
 
 form.text-search {
     text-align: center;
+    margin-top: 15%;
 }
 
 /* Search text styling */
 form.text-search input[type=text] {
-    color: blue;
+    color: rgb(0, 0, 0);
     border-radius: 20px;
-width: 100%;
-    padding-left: 5vh;
+    width: 100%;
+    padding-left: 7vh;
     padding-right: 15vh;
     height: 40px;
 }
@@ -308,12 +309,14 @@ form button {
     border-radius: 20px;
     margin-top: 5px;
     position: absolute;
-    right: 8vh;
+    right: 4vh;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 /* Serach button hover styling */
 form button:hover {
-    background-color: blue;
+    background-color: rgb(168, 168, 168);
     /* color: red; */
 }
 
