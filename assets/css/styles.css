@@ -206,6 +206,11 @@ body {
     {
     margin-top: 10px;
     }   
+    .nav-title
+    {
+       font-size: 30px;
+    }
+
     .container {
         flex-flow: column;
     }
