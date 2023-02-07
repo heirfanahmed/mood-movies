@@ -18,12 +18,11 @@ Server side APIs used are:
 
 Using above weather API, present day / time weather forecast is retrieved for the selected city. The link displays movies based on the weather report.
 If it is sunny, it recommends 6 movies based on action, adventure, musicals, romance, sports and thriller.
-If it is cloudy, fog or raining, it recommends 6 movies based on comedy, drama, fantasy, horror and mystery.
+If it is cloudy, fog or raining, it recommends 12 movies based on comedy, drama, fantasy, horror and mystery.
 
 The base URL for the API weather calls look like the following: `https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={294d8b64be1fb708429a60b0e59477b5&limit6}`.
 
 We have used `localStorage` to store persistent data.
-
 
 
 ## User Story
@@ -81,13 +80,12 @@ As a user of this web app, I want to watch movies based on the weather condition
 
     * Displays the current weather condition based on selected city.
  
-    * Recommends 6 movies to watch.
+    * Recommends 12 movies to watch.
 
 
+## Screenshot
 
-## Screen Shot of the deployed website:
-  ![](assets/images/mood-movies.png)
-
+![Mood Movies](https://user-images.githubusercontent.com/82023025/217381077-2ba3c2c2-f6fa-4eb4-a4b5-a4bc1a876f37.png)
 
 
 ## Links to the deployed website and repository URL:
