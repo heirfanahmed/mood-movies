@@ -196,6 +196,10 @@ body {
     .space {
         gap: 0;
     }
+    .weather-icon {
+        max-width: 300px;
+    }
+    
   }
   
 
@@ -205,6 +209,15 @@ body {
     {
     margin-top: 10px;
     }   
+    .nav-title
+    {
+       font-size: 30px;
+    }
+    .nav-title img
+    {
+       height: 50px;
+    }
+
     .container {
         flex-flow: column;
     }

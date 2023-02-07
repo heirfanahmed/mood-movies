@@ -48,6 +48,7 @@ $(".submit" ).click(function(event) {
   }).then(function(response) {
     weatherIcon = response.weather[0].icon;
     getMovies ();
+    
  // <<< THIS IS API RESPONSE AFTER YOU ENTER CITY NAME AND PRESS SEARCH
 
  var localTime = moment();
@@ -67,6 +68,9 @@ $(".submit" ).click(function(event) {
 
  //class changed - class container replaced with class space
  var weatherEl = $(".space");
+
+// removes the class for every new search of the user
+ weatherEl.removeClass("dayBackground nightBackground");
 
  // Checking for the local time and if it is during the time between sunrise and sunset, the script adds dayBackground, if not adds nightBackground
  
@@ -93,15 +97,38 @@ cityLocation.text(cityName);
 var weatherConditions;
 weatherConditions = response.weather[0].main;
 var discriptionWeather = $('#discription-weather');
-discriptionWeather.text(weatherConditions);
+discriptionWeather.text("The weather is "+weatherConditions+"!"+ " Check Below for some movies that will go well with this weather!");
 
  // Adding day and night icons based on the current time at the destination
- if (unixTimestamp > sunrise && unixTimestamp < sunset) {
- $('.weather-icon').attr("src","assets/images/"+weatherConditions+".svg");
-} else {
-    $('.weather-icon').attr("src","assets/images/"+weatherConditions+"n.svg");
+ if(iconCheck() == false)
+ {
+  // Default icon if the weather type dosnt have an icon pair
+  $('.weather-icon').attr("src","assets/images/Clear.svg");
+ }
+  else{
+    if (unixTimestamp > sunrise && unixTimestamp < sunset) 
+      {
+      $('.weather-icon').attr("src","assets/images/"+weatherConditions+".svg");
+      } 
+      else 
+      {
+          $('.weather-icon').attr("src","assets/images/"+weatherConditions+"n.svg");
+      };
 };
-
+// Check weather matches valid icon set.
+function iconCheck()
+{
+  var Iconarr = ["Clear","Clearn","Clouds","Cloudsn","Drizzle","Drizzlen","Fog","Fogn","Ran","Rainn","Snow","Snown","Thunderstorm","Thunderstormn"];
+  if (Iconarr.includes(weatherConditions))
+  {
+    return true;
+  }
+  else
+  {
+    return false;
+  }
+  
+}
 $("#weather").removeClass("hidden");
 $("#movies").removeClass("hidden");
 $("#weather").addClass("shown");
