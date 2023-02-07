@@ -48,6 +48,7 @@ $(".submit" ).click(function(event) {
   }).then(function(response) {
     weatherIcon = response.weather[0].icon;
     getMovies ();
+    
  // <<< THIS IS API RESPONSE AFTER YOU ENTER CITY NAME AND PRESS SEARCH
 
  var localTime = moment();
@@ -66,6 +67,9 @@ $(".submit" ).click(function(event) {
  console.log(sunset);
 
  var weatherEl = $(".container");
+
+// removes the class for every new search of the user
+ weatherEl.removeClass("dayBackground nightBackground");
 
  // Checking for the local time and if it is during the time between sunrise and sunset, the script adds dayBackground, if not adds nightBackground
  
@@ -100,6 +104,8 @@ discriptionWeather.text(weatherConditions);
 } else {
     $('.weather-icon').attr("src","assets/images/"+weatherConditions+"n.svg");
 };
+
+
 
 $("#weather").removeClass("hidden");
 $("#movies").removeClass("hidden");
