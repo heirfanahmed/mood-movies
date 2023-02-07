@@ -175,9 +175,18 @@ body {
     width:100%;
 }
 
+.card {
+margin-bottom: 1rem; 
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 1;
+}
+
 .navbar{
     position: inherit;
 }
+
 
 @media (max-width: 779px) {
     
@@ -279,8 +288,8 @@ form.text-search {
 form.text-search input[type=text] {
     color: blue;
     border-radius: 20px;
-width: 92%;
-    padding-left: 7vh;
+    width: 100%;
+    padding-left: 5vh;
     padding-right: 15vh;
     height: 40px;
 }
