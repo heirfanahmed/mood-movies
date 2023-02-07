@@ -99,14 +99,35 @@ var discriptionWeather = $('#discription-weather');
 discriptionWeather.text("The weather is "+weatherConditions+"!"+ " Check Below for some movies that will go well with this weather!");
 
  // Adding day and night icons based on the current time at the destination
- if (unixTimestamp > sunrise && unixTimestamp < sunset) {
- $('.weather-icon').attr("src","assets/images/"+weatherConditions+".svg");
-} else {
-    $('.weather-icon').attr("src","assets/images/"+weatherConditions+"n.svg");
+ if(iconCheck() == false)
+ {
+  // Default icon if the weather type dosnt have an icon pair
+  $('.weather-icon').attr("src","assets/images/Clear.svg");
+ }
+  else{
+    if (unixTimestamp > sunrise && unixTimestamp < sunset) 
+      {
+      $('.weather-icon').attr("src","assets/images/"+weatherConditions+".svg");
+      } 
+      else 
+      {
+          $('.weather-icon').attr("src","assets/images/"+weatherConditions+"n.svg");
+      };
 };
-
-
-
+// Check weather matches valid icon set.
+function iconCheck()
+{
+  var Iconarr = ["Clear","Clearn","Clouds","Cloudsn","Drizzle","Drizzlen","Fog","Fogn","Ran","Rainn","Snow","Snown","Thunderstorm","Thunderstormn"];
+  if (Iconarr.includes(weatherConditions))
+  {
+    return true;
+  }
+  else
+  {
+    return false;
+  }
+  
+}
 $("#weather").removeClass("hidden");
 $("#movies").removeClass("hidden");
 $("#weather").addClass("shown");
