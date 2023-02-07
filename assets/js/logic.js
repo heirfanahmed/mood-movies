@@ -66,7 +66,8 @@ $(".submit" ).click(function(event) {
  console.log(sunrise);
  console.log(sunset);
 
- var weatherEl = $(".container");
+ //class changed - class container replaced with class space
+ var weatherEl = $(".space");
 
 // removes the class for every new search of the user
  weatherEl.removeClass("dayBackground nightBackground");

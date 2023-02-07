@@ -16,7 +16,8 @@
 </head>
 
 <body>
-
+  <!-- Create wraprer for the whole page content -->
+   <div class="container-fluid">
     <!-- Create header with Nav Bar - Josh -->
         <nav class="nav-bar-title">
         <a style="text-decoration: none;" class="nav-title" href="index.html"><img class="logo" src="assets/images/logo.PNG">MoodMovies</a>
@@ -63,7 +64,7 @@
 
 
   <!-- Create Search/Form - Irfan -->    
-    <div class="wrapper">
+    <div class="container-fluid wrapper">
       <form class="text-search">
         <img class="search-icon" src="assets/images/search-icon.png" alt="">
           <input id="test" type="text" placeholder="Type location"  name="search">
@@ -74,7 +75,7 @@
 
   <!-- Create current Weather report display - Daisy -->
     <section id="weather"class=" hidden wrapper">
-        <div class="container space">
+        <div class="container-fluid space">
           <div class="icon-container">
             <img class="weather-icon" src="" alt="Sun weather icon">
           </div>
@@ -95,7 +96,7 @@
      <!-- section class changed to "weather-container"  -->
      <!--cards removied - generated dinamically via JS-->
      
-     <section id="movies" class="hidden weather-container">
+     <section id="movies" class="hidden container-fluid">
       <h4 class="weather-container">Movie suggestions</h4>
     <div class="row mt-2" id="movie-list">     
     </div>
@@ -103,7 +104,7 @@
 
 
     <!-- Create footer - Irfan -->
-    <footer>
+    <footer class="container-fluid wrapper">
       <div>
         <h4 id="contact-us" class="contact-us">
           <span style="cursor:pointer"><a href="https://github.com/heirfanahmed/mood-movies"><u>Contact Us</u> </a> </span>
@@ -113,6 +114,8 @@
           </h5>
       </div>
   </footer>
+
+  </div>
 
 <!-- JQuery - link added -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
