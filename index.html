@@ -19,6 +19,27 @@
   <!-- Create wraprer for the whole page content -->
    <div class="container-fluid">
     <!-- Create header with Nav Bar - Josh -->
+    <div class="modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Welcome to our site!</h5>
+          </div>
+          <div class="modal-body">
+            <p>Please confirm your age to enter.</p>
+            <p>By confirming age you are agreeing to the terms of use and privacy policy.</p>
+            <p id="modalage" class="modalage">You are not permitted to use this site at 18 or below.</p>
+          </div>
+          <div class="modal-footer">
+            <button style="background-color: rgb(39, 39, 39);" id="modalclose" type="button" class="btn btn-secondary" data-dismiss="modal">I am over 18</button>
+            <button id="modalagebutton" type="button" class="btn btn-secondary" data-dismiss="modal">I am under 18</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+
         <nav class="nav-bar-title">
         <a style="text-decoration: none;" class="nav-title" href="index.html"><img class="logo" src="assets/images/logo.PNG">MoodMovies</a>
           <ul class="show-nav nav-list">

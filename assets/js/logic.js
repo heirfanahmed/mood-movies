@@ -15,6 +15,23 @@
 // 7. Get title of the image from the TMDB API
 // 
 // 
+$(document).ready(function(){
+  $(".modal").modal('show');
+});
+
+$('#modalclose').click(function(){
+  $(".modal").modal('hide');
+});
+
+$('#modalagebutton').click(function(){
+  $("#modalage").removeClass("modalage");
+  $("#modalage").addClass("modalageshown");
+});
+
+
+
+
+
 var apiKeyMovie = "90bfcfb3836391f1a58986e70119cd20";
 var apiKeyWeather = "294d8b64be1fb708429a60b0e59477b5";
 
