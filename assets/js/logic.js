@@ -42,7 +42,7 @@ var queryUrl2 = "https://api.themoviedb.org/3/genre/movie/list?api_key="+apiKeyM
 // EVENT LISTENER FOR SUBMIT BUTTON TO GET CITY
 var locationEntry;
 var weatherIcon;
-locationEntry = localStorage.getItem("userLocation");
+locationEntry = (localStorage.getItem("userLocation")); if (localStorage.getItem("userLocation") == null)  {locationEntry="london"};
 getWeatherForLocation();
     $(".submit" ).click(function(event) {
     event.preventDefault();
