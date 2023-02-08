@@ -45,12 +45,18 @@ var queryUrl2 = "https://api.themoviedb.org/3/genre/movie/list?api_key="+apiKeyM
 // EVENT LISTENER FOR SUBMIT BUTTON TO GET CITY
 var locationEntry;
 var weatherIcon;
+if (localStorage.getItem("userLocation") !== null)
+{locationEntry = localStorage.getItem("userLocation");
+getWeatherForLocation()
+}
 $(".submit" ).click(function(event) {
     event.preventDefault();
     $('#movie-list').empty();
     locationEntry = $("#test").val();
-    localStorage.setItem("userLocation", locationEntry);
+    localStorage.setItem("userLocation", locationEntry);});
+    getWeatherForLocation();
   // CALL TO GEO API FOR LAT AND LON
+  function getWeatherForLocation(){
   var queryUrlGeocode = "https://api.openweathermap.org/geo/1.0/direct?q="+locationEntry+"&limit=1&appid="+apiKeyWeather;
   $.ajax({
     url: queryUrlGeocode,
