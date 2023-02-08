@@ -137,7 +137,7 @@ discriptionWeather.text("The weather is "+weatherConditions+"!"+ " Check Below f
 // Check weather matches valid icon set.
 function iconCheck()
 {
-  var Iconarr = ["Clear","Clearn","Clouds","Cloudsn","Drizzle","Drizzlen","Fog","Fogn","Ran","Rainn","Snow","Snown","Thunderstorm","Thunderstormn"];
+  var Iconarr = ["Clear","Clearn","Clouds","Cloudsn","Drizzle","Drizzlen","Fog","Fogn","Rain","Rainn","Snow","Snown","Thunderstorm","Thunderstormn"];
   if (Iconarr.includes(weatherConditions))
   {
     return true;
