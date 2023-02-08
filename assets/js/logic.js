@@ -49,6 +49,7 @@ $(".submit" ).click(function(event) {
     event.preventDefault();
     $('#movie-list').empty();
     locationEntry = $("#test").val();
+    localStorage.setItem("userLocation", locationEntry);
   // CALL TO GEO API FOR LAT AND LON
   var queryUrlGeocode = "https://api.openweathermap.org/geo/1.0/direct?q="+locationEntry+"&limit=1&appid="+apiKeyWeather;
   $.ajax({
