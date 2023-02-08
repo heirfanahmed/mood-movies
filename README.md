@@ -14,7 +14,7 @@ Based on real world problem, develop a Mood Movies list for the user to play dep
 
 Server side APIs used are:
 1. Weather (OpenWeather - https://openweathermap.org) - for real time weather report.
-2. TMDB - for the movies.
+2. Movie Cards  (TMDB - https://www.themoviedb.org/) - for the movies suggestion.
 
 Using above weather API, present day / time weather forecast is retrieved for the selected city. The link displays movies based on the weather report.
 If it is sunny, it recommends 6 movies based on action, adventure, musicals, romance, sports and thriller.
