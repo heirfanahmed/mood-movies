@@ -29,6 +29,15 @@ body {
     background-color: var(--nav-background);
 }
 
+.modalage
+{
+    visibility: hidden;
+}
+.modalageshown
+{
+    visibility: visible;
+    color: red;
+}
 .logo
 {
     height: 70px;
